@@ -1,0 +1,6 @@
+.idea/
+.vscode/
+*pvenv/
+Time_log/
+__pycache__/
+*.csv
