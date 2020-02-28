@@ -29,13 +29,13 @@ class TrackedTime(object):
 
         if path:
             if platform.system() == 'Windows':
-                _path = ''.join(i + '\\' for i in path.split('\\')[:-1])
-                _file_path = _path + 'Time_log\\'
-                return _file_path
+                # _path = ''.join(i + '\\' for i in path.split('\\')[:-1])
+                # _file_path = _path + 'Time_log\\'
+                return os.path.abspath(os.path.dirname(__file__)) + '\\Time_log\\'
             elif platform.system() == 'Linux':
-                _path = ''.join(i + '/' for i in path.split('/')[:-1])
-                _file_path = _path + 'Time_log/'
-                return _file_path
+                # _path = ''.join(i + '/' for i in path.split('/')[:-1])
+                # _file_path = _path + 'Time_log/'
+                return os.path.abspath(os.path.dirname(__file__)) + '/Time_log/'
             else:
                 raise OSError
         else:
