@@ -13,7 +13,7 @@ class TrackedTime(object):
     def __init__(self, file_path=None):
 
         self.file_path = file_path
-        self.columns = ('Overtime', 'Night shift', 'Vacation', 'Sickness', 'Sick Time', 'Day-off')
+        self.columns = ('Overtime', 'Night shift', 'Sickness', 'Sick Time', 'Vacation', 'Day-off')
         self.user_specific_df = None
         self._df = None
         if not self.file_path:
